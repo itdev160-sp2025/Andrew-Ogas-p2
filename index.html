@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" type="text/css" href="./css/styles.css">
+        <link href="https://fonts.googleapis.com/css2?family=Geo:ital@0;1&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <h1>Maze Runner</h1>
+        </header>
+        <main>
+            <div class="border" id="playgrid">
+                <div class="blackSquare"></div>
+                <div class="blackSquare"></div>
+                <div class="blackSquare"></div>
+                <div class="blackSquare"></div>
+                <div class="blackSquare"></div>
+                <div class="blackSquare"></div>
+                <div class="blackSquare"></div>
+                <div class="blackSquare"></div>
+                <div class="blackSquare"></div>
+                <div class="blackSquare"></div>
+
+                <div class="blackSquare"></div>
+                <div class="whiteSquare"></div>
+                <div class="whiteSquare"></div>
+                <div class="whiteSquare"></div>
+                <div class="whiteSquare"></div>
+                <div class="whiteSquare"></div>
+                <div class="whiteSquare"></div>
+                <div class="whiteSquare"></div>
+                <div class="whiteSquare"></div>
+                <div class="blackSquare"></div>
+
+                <div class="blackSquare"></div>
+                <div class="whiteSquare"></div>
+                <div class="blackSquare"></div>
+                <div class="blackSquare"></div>
+                <div class="blackSquare"></div>
+                <div class="blackSquare"></div>
+                <div class="blackSquare"></div>
+                <div class="blackSquare"></div>
+                <div class="whiteSquare"></div>
+                <div class="blackSquare"></div>
+                
+                <div class="blackSquare"></div>
+                <div class="whiteSquare"></div>
+                <div class="blackSquare"></div>
+                <div class="whiteSquare"></div>
+                <div class="whiteSquare"></div>
+                <div class="whiteSquare"></div>
+                <div class="whiteSquare"></div>
+                <div class="blackSquare"></div>
+                <div class="whiteSquare"></div>
+                <div class="blackSquare"></div>
+
+                <div class="blackSquare"></div>
+                <div class="whiteSquare"></div>
+                <div class="blackSquare"></div>
+                <div class="whiteSquare"></div>
+                <div class="blackSquare"></div>
+                <div class="blackSquare"></div>
+                <div class="whiteSquare"></div>
+                <div class="blackSquare"></div>
+                <div class="whiteSquare"></div>
+                <div class="blackSquare"></div>
+
+                <div class="blackSquare"></div>
+                <div class="whiteSquare"></div>
+                <div class="blackSquare"></div>
+                <div class="whiteSquare"></div>
+                <div class="blackSquare"></div>
+                <div class="endMaze"></div>
+                <div class="whiteSquare"></div>
+                <div class="blackSquare"></div>
+                <div class="whiteSquare"></div>
+                <div class="blackSquare"></div>
+
+                <div class="blackSquare"></div>
+                <div class="whiteSquare"></div>
+                <div class="blackSquare"></div>
+                <div class="whiteSquare"></div>
+                <div class="blackSquare"></div>
+                <div class="blackSquare"></div>
+                <div class="blackSquare"></div>
+                <div class="blackSquare"></div>
+                <div class="whiteSquare"></div>
+                <div class="blackSquare"></div>
+
+                <div class="blackSquare"></div>
+                <div class="whiteSquare"></div>
+                <div class="blackSquare"></div>
+                <div class="whiteSquare"></div>
+                <div class="whiteSquare"></div>
+                <div class="whiteSquare"></div>
+                <div class="whiteSquare"></div>
+                <div class="whiteSquare"></div>
+                <div class="whiteSquare"></div>
+                <div class="blackSquare"></div>
+
+                <div class="blackSquare"></div>
+                <div class="whiteSquare"></div>
+                <div class="blackSquare"></div>
+                <div class="blackSquare"></div>
+                <div class="blackSquare"></div>
+                <div class="blackSquare"></div>
+                <div class="blackSquare"></div>
+                <div class="blackSquare"></div>
+                <div class="blackSquare"></div>
+                <div class="blackSquare"></div>
+
+                <div class="blackSquare"></div>
+                <div class="whiteSquare"></div>
+                <div class="whiteSquare"></div>
+                <div class="whiteSquare"></div>
+                <div class="whiteSquare"></div>
+                <div class="whiteSquare"></div>
+                <div class="whiteSquare"></div>
+                <div class="whiteSquare"></div>
+                <div class="whiteSquare"></div>
+                <div class="startMaze"></div>
+            </div>
+            <div id="gameControls">
+                <div id="mazeTitle"><h2 id="titleText">Spiral</h2></div>
+                <div id="timer">
+                    <H2 id="timeElapsed">0:00</H2>
+                </div>
+                <div id="info"><h2 id="infoText">info</h2></div>
+                <div class="waitState" id="gameState">
+                    <h2 id="stateText">Status</h2>
+                </div>
+                <div id="resetButton">
+                    <h2 id="resetText">Reset</h2>
+                </div>
+                <div id="highScores">
+                    <div class="score">
+                        <h2>PlayerName</h2>
+                        <h3>4:20</h3>
+                    </div>
+                    <div class="score">
+                        <h2>PlayerName</h2>
+                        <h3>4:20</h3>
+                    </div>
+                    <div class="score">
+                        <h2>PlayerName</h2>
+                        <h3>4:20</h3>
+                    </div>
+                    <div class="score">
+                        <h2>PlayerName</h2>
+                        <h3>4:20</h3>
+                    </div>
+                    <div class="score">
+                        <h2>PlayerName</h2>
+                        <h3>4:20</h3>
+                    </div>
+                </div>
+            </div>
+            <div style="overflow-x: scroll;" id="mazeSelector">
+                <div class="mazeOption" mapIndex="0">
+                    <div class="overlayButton" mapIndex="0"></div>
+                    <h2 class="mazeOptionTitle">Spiral</h2>
+                    <div class="miniMaze">
+                        <div class="blackSquare"></div>
+                        <div class="blackSquare"></div>
+                        <div class="blackSquare"></div>
+                        <div class="blackSquare"></div>
+                        <div class="blackSquare"></div>
+                        <div class="blackSquare"></div>
+                        <div class="blackSquare"></div>
+                        <div class="blackSquare"></div>
+                        <div class="blackSquare"></div>
+                        <div class="blackSquare"></div>
+                        
+                        <div class="blackSquare"></div>
+                        <div class="whiteSquare"></div>
+                        <div class="whiteSquare"></div>
+                        <div class="whiteSquare"></div>
+                        <div class="whiteSquare"></div>
+                        <div class="whiteSquare"></div>
+                        <div class="whiteSquare"></div>
+                        <div class="whiteSquare"></div>
+                        <div class="whiteSquare"></div>
+                        <div class="blackSquare"></div>
+                        
+                        <div class="blackSquare"></div>
+                        <div class="whiteSquare"></div>
+                        <div class="blackSquare"></div>
+                        <div class="blackSquare"></div>
+                        <div class="blackSquare"></div>
+                        <div class="blackSquare"></div>
+                        <div class="blackSquare"></div>
+                        <div class="blackSquare"></div>
+                        <div class="whiteSquare"></div>
+                        <div class="blackSquare"></div>
+                        
+                        <div class="blackSquare"></div>
+                        <div class="whiteSquare"></div>
+                        <div class="blackSquare"></div>
+                        <div class="whiteSquare"></div>
+                        <div class="whiteSquare"></div>
+                        <div class="whiteSquare"></div>
+                        <div class="whiteSquare"></div>
+                        <div class="blackSquare"></div>
+                        <div class="whiteSquare"></div>
+                        <div class="blackSquare"></div>
+                        
+                        <div class="blackSquare"></div>
+                        <div class="whiteSquare"></div>
+                        <div class="blackSquare"></div>
+                        <div class="whiteSquare"></div>
+                        <div class="blackSquare"></div>
+                        <div class="blackSquare"></div>
+                        <div class="whiteSquare"></div>
+                        <div class="blackSquare"></div>
+                        <div class="whiteSquare"></div>
+                        <div class="blackSquare"></div>
+                        
+                        <div class="blackSquare"></div>
+                        <div class="whiteSquare"></div>
+                        <div class="blackSquare"></div>
+                        <div class="whiteSquare"></div>
+                        <div class="blackSquare"></div>
+                        <div class="endMaze"></div>
+                        <div class="whiteSquare"></div>
+                        <div class="blackSquare"></div>
+                        <div class="whiteSquare"></div>
+                        <div class="blackSquare"></div>
+                        
+                        <div class="blackSquare"></div>
+                        <div class="whiteSquare"></div>
+                        <div class="blackSquare"></div>
+                        <div class="whiteSquare"></div>
+                        <div class="blackSquare"></div>
+                        <div class="blackSquare"></div>
+                        <div class="blackSquare"></div>
+                        <div class="blackSquare"></div>
+                        <div class="whiteSquare"></div>
+                        <div class="blackSquare"></div>
+                        
+                        <div class="blackSquare"></div>
+                        <div class="whiteSquare"></div>
+                        <div class="blackSquare"></div>
+                        <div class="whiteSquare"></div>
+                        <div class="whiteSquare"></div>
+                        <div class="whiteSquare"></div>
+                        <div class="whiteSquare"></div>
+                        <div class="whiteSquare"></div>
+                        <div class="whiteSquare"></div>
+                        <div class="blackSquare"></div>
+                        
+                        <div class="blackSquare"></div>
+                        <div class="whiteSquare"></div>
+                        <div class="blackSquare"></div>
+                        <div class="blackSquare"></div>
+                        <div class="blackSquare"></div>
+                        <div class="blackSquare"></div>
+                        <div class="blackSquare"></div>
+                        <div class="blackSquare"></div>
+                        <div class="blackSquare"></div>
+                        <div class="blackSquare"></div>
+                        
+                        <div class="blackSquare"></div>
+                        <div class="whiteSquare"></div>
+                        <div class="whiteSquare"></div>
+                        <div class="whiteSquare"></div>
+                        <div class="whiteSquare"></div>
+                        <div class="whiteSquare"></div>
+                        <div class="whiteSquare"></div>
+                        <div class="whiteSquare"></div>
+                        <div class="whiteSquare"></div>
+                        <div class="startMaze"></div>
+                    </div>
+                </div>
+                <div class="mazeOption" mapIndex="1">
+                    <div class="overlayButton" mapIndex="1"></div>
+
+                </div>
+                <div class="mazeOption">
+                
+                </div>
+                <div class="mazeOption">
+                
+                </div>
+                <div class="mazeOption">
+                
+                </div>
+                <div class="mazeOption">
+                
+                </div>
+            </div>
+        </main>
+        <script src="./js/scripts.js"></script>
+    </body>
+</html>
