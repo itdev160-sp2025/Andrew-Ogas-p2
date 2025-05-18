@@ -5,6 +5,17 @@
         <link href="https://fonts.googleapis.com/css2?family=Geo:ital@0;1&display=swap" rel="stylesheet">
     </head>
     <body>
+        <div id="infoDisplay">
+            <div id="infoDismiss"></div>
+            <div id="infoBox">
+                <h2 class="infoTitle">Maze Runner Instructions</h2>
+                <h3>The goal of Maze Runner is to get to the end of the maze as fast as possible. Select the maze you want to run from the choices at the bottom. Then, click on the green box to start the maze.</h3>
+                <div class="startMaze"></div>
+                <h3>Race to get to the red square as fast as possible. If you touch a black square or go out of bounds, you lose.</h3>
+                <div class="endMaze"></div>
+                <h3>If you get a top five score, you will be able to save it on the leader board.</h3>
+            </div>
+        </div>
         <header>
             <h1>Maze Runner</h1>
         </header>
@@ -135,28 +146,34 @@
                 <div id="highScores">
                     <div class="score">
                         <h2>PlayerName</h2>
-                        <h3>4:20</h3>
+                        <h3>1:23</h3>
                     </div>
                     <div class="score">
                         <h2>PlayerName</h2>
-                        <h3>4:20</h3>
+                        <h3>1:23</h3>
                     </div>
                     <div class="score">
                         <h2>PlayerName</h2>
-                        <h3>4:20</h3>
+                        <h3>1:23</h3>
                     </div>
                     <div class="score">
                         <h2>PlayerName</h2>
-                        <h3>4:20</h3>
+                        <h3>1:23</h3>
                     </div>
                     <div class="score">
                         <h2>PlayerName</h2>
-                        <h3>4:20</h3>
+                        <h3>1:23</h3>
                     </div>
+                </div>
+                <div id="saveScore">
+                    <h2>Top Five!</h2>
+                    <h3>Would You Like To Save Your Time?</h3>
+                    <textarea id="playerName" rows="1" cols="12"></textarea>
+                    <div><h4 id="saveScoreButton">Save</h4><h4 id="cancelSaveButton">Cancel</h4></div>
                 </div>
             </div>
             <div style="overflow-x: scroll;" id="mazeSelector">
-                <div class="mazeOption" mapIndex="0">
+                <div class="mazeOption">
                     <div class="overlayButton" mapIndex="0"></div>
                     <h2 class="mazeOptionTitle">Spiral</h2>
                     <div class="miniMaze">
@@ -270,22 +287,6 @@
                         <div class="whiteSquare"></div>
                         <div class="startMaze"></div>
                     </div>
-                </div>
-                <div class="mazeOption" mapIndex="1">
-                    <div class="overlayButton" mapIndex="1"></div>
-
-                </div>
-                <div class="mazeOption">
-                
-                </div>
-                <div class="mazeOption">
-                
-                </div>
-                <div class="mazeOption">
-                
-                </div>
-                <div class="mazeOption">
-                
                 </div>
             </div>
         </main>

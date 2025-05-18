@@ -1,5 +1,48 @@
 body{
     font-family:'Geo', 'Courier New', Courier, monospace;
+    #infoDisplay{
+        position: absolute;
+        display: none;
+        #infoBox{
+            display: grid;
+            grid-template-rows: 20% 23% 10% 19% 10% 1fr;
+            width: 50vw;
+            height: 40vw;
+            margin: 0 0 0 24.75vw;
+            box-sizing: border-box;
+            border-radius: 2vw;
+            border: double black 1vw;
+            background-color: grey;
+            z-index: 2;
+
+            .infoTitle{
+                text-align: center;
+                font-size: 4vw;
+            }
+            h3{
+                margin: 0;
+                padding: 0;
+                margin-left: 3.5vw;
+                margin-right: 3.5vw;
+                font-size: 2vw;
+            }
+            div{
+                margin: 0;
+                padding: 0;
+                margin-left: 3.5vw;
+                width: 3vw;
+                aspect-ratio: 1;
+                border: solid black .25vw;
+            }
+        }
+        #infoDismiss{
+            margin: 0;
+            width: 100vw;
+            height: 100vh;
+            position:absolute;
+            z-index: 1;
+        }
+    }
 }
 header{
     background-color: black;
@@ -130,6 +173,49 @@ main{
                 text-align: center;
             }
         }
+        #saveScore{
+            background-color: rgb(189, 189, 189);
+            width: 75%;
+            margin: auto;
+            margin-top: 8.3vw;
+            padding: .5vw;
+            display: none;
+            grid-gap: .5vw;
+            border: solid black .3vw;
+            border-radius: .5vw;
+
+            h2{
+                margin: 0;
+                padding: 0;
+                font-size: 3vw;
+                text-align: center;
+            }
+            h3{
+                margin: 0;
+                padding: 0;
+                text-align: center;
+                font-size: 1.5vw;
+            }
+            #playerName{
+                font-size: 1vw;
+                resize: none;
+            }
+            div{
+                display: grid;
+                grid-template-columns: auto auto;
+                column-gap: 12vw;
+                h4{
+                    margin: 0;
+                    background-color: white;
+                    border: solid black .25vw;
+                    border-radius: .5vw;
+                    text-align: center;
+                    font-size: 1.5vw;
+                    width: 5vw;
+                    height: 2vw;
+                }
+            }
+        }
         #highScores{
             background-color: rgb(189, 189, 189);
             width: 75%;
@@ -139,7 +225,7 @@ main{
             display: grid;
             grid-gap: .5vw;
             border: solid black .3vw;
-            border-radius: 0 0 .5vw .5vw;
+            border-radius: .5vw;
             .score{
                 display: grid;
                 grid-template-columns: 1fr 4vw;
@@ -176,6 +262,8 @@ main{
         align-content: center;
         overflow: scroll;
         scrollbar-color: white grey;
+        user-select: none;
+
         .mazeOption{
             display: grid;
             grid-template-rows: 40% 1fr;
